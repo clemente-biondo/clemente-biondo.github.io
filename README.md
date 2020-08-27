@@ -34,11 +34,3 @@ The salt is a random generated String of 16 alphanumeric characters that changes
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-
-
-
-
-Since 
-
- 
