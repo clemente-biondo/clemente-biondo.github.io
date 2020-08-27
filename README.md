@@ -8,7 +8,8 @@ This way you can get rid of the default "SolrRocks" password stored in the secur
 I made this tool to streamline the process of encoding the initial solr passwords for the Basic Authentication plugin.
 
 When enabling Basic Authentication on solr, the initial passwords are stored in a security.json file under the SOLR home directory as a sha256(password+salt) hash.
-User IDs and passwords can be changed later on by using the HTTP Api
+User IDs and passwords can be changed later on by using the HTTP Api.
+
 The specific hashing algorithm can be found here and is a little cumbersome:
 [Sha256AuthenticationProvider.java](https://github.com/apache/lucene-solr/blob/master/solr/core/src/java/org/apache/solr/security/Sha256AuthenticationProvider.java)
 
@@ -16,7 +17,7 @@ The specific hashing algorithm can be found here and is a little cumbersome:
 
 The entire process is executed client side, no information is sent to any remote server.
 
-The process is protected agaist XSS attacs by using [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
+The process is protected agaist XSS attacks by using [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 The code is minimal and easy to inspect.
 
