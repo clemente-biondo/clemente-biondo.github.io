@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none';script-src 'self'">
+    <title>An Online Solr password encryption tool for the Basic Authentication plugin</title>
+</head>
+
+<body>
+  <h1>Online Solr password encryption tool</h1>
+  <p>An utility that allows to hash and salt a solr password to be used in the security.json file for Basic Authentication.<br>
+  The salt is a random generated String of 16 alphanumeric characters. See <a target="_blank" href="https://lucene.apache.org/solr/guide/basic-authentication-plugin.html">Solr Basic Authentication Plugin</a> for reference.
+  </p>
+    
+    <label for="solr_password">Solr password:</label>
+    <input id="solr_password" type="password">
+
+    <p>an example <code>security.json</code> file with the encrypted password</p>
+    <pre>
+{
+  "authentication":{ 
+    "blockUnknown": true, 
+    "class":"solr.BasicAuthPlugin",
+    "credentials":{"solr":"<span id="solr_salted_hashed_password"></span>"}, 
+    "realm":"My Solr users", 
+    "forwardCredentials": false
+  }
+}    
+    </pre>
+
+    <script src="solr_pwd_encryption.js"></script>
+</body>
+</html>
