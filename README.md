@@ -11,7 +11,7 @@ When enabling Basic Authentication on solr, the initial passwords are stored in 
 User IDs and passwords can be changed later on by using the HTTP Api.
 
 The specific hashing algorithm can be found here and is a little cumbersome:
-[Sha256AuthenticationProvider.java](https://github.com/apache/lucene-solr/blob/master/solr/core/src/java/org/apache/solr/security/Sha256AuthenticationProvider.java)
+[Sha256AuthenticationProvider.java](https://github.com/apache/solr/blob/main/solr/core/src/java/org/apache/solr/security/Sha256AuthenticationProvider.java)
 
 ## Security
 
